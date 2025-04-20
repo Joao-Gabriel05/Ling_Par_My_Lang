@@ -90,7 +90,7 @@ IDENTIFIER	[A-Za-z][A-Za-z0-9_]*	Nome de variável (letra seguida de letras/díg
 NUMBER	[0-9]+	Sequência de dígitos (inteiro)
 WHITESPACE	[ \t\r\n]+	Espaços em branco, tabs e quebras de linha (ignorar)
 
-#Análise Sintatica
+# Análise Sintatica
 A sintaxe da minha linguagem foi organizada de modo a permitir um parser LL(1). Para cada construtor de comando (remember, forget, if, while, run, show, bloco de debug $…$ ou ponto‑e‑vírgula isolado), existe um token inicial distinto, de forma que não há ambiguidades de previsão.
 
 As expressões aritmético‑lógicas foram estruturadas em dois níveis:
