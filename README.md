@@ -15,48 +15,62 @@ o debug imprime no terminal o que está acontecendo em cada linha, começando no
 
 
 # EBNF
-programa         = { statement } "end" ";" ;
+(* Programa principal: zero ou mais statements, seguido de 'end;' *)
+<program>         ::= { <statement> } "end" ";" ;
 
-statement        = create_variable
-                 | delete_variable
-                 | conditional
-                 | loop
-                 | repeat_n_times
-                 | print
-                 | debug_block
-                 | ";" ;
+(* Qualquer statement válido na linguagem *)
+<statement>       ::= <create_variable>
+                    | <delete_variable>
+                    | <if_statement>
+                    | <while_loop>
+                    | <repeat_loop>
+                    | <print_statement>
+                    | <debug_block>
+                    ;
 
-create_variable  = "remember" identifier "as" expression ";" ;
-delete_variable  = "forget" identifier ";" ;
+(* Criação e deleção de variáveis *)
+<create_variable> ::= "remember" <identifier> "as" <expression> ";" ;
+<delete_variable> ::= "forget" <identifier> ";" ;
 
-conditional      = "if" "(" expression ")" block [ "else" "(" expression ")" block ] ;
+(* Condicional com suporte a else-if e else simples *)
+<if_statement>    ::=
+                      "if" "(" <expression> ")" <block>
+                      { "else if" "(" <expression> ")" <block> }
+                      [ "else" <block> ]
+                    ;
 
-loop             = "while" "(" expression ")" "repeat" block ;
+(* Loop padrão while *)
+<while_loop>      ::= "while" "(" <expression> ")" "repeat" <block> ;
 
-repeat_n_times   = "run" "(" number ")" block ;
+(* Repetição fixa de N vezes *)
+<repeat_loop>     ::= "run" "(" <number> ")" <block> ;
 
-print            = "show" "(" expression ")" ";" ;
+(* Impressão de valores *)
+<print_statement> ::= "show" "(" <expression> ")" ";" ;
 
-debug_block      = "$" { statement } "$" ;
+(* Bloco de debug que ativa saída linha a linha *)
+<debug_block>     ::= "$" { <statement> } "$" ;
 
-block            = "{" { statement } "}" ;
+(* Bloco genérico delimitado por chaves *)
+<block>           ::= "{" { <statement> } "}" ;
 
-expression       = term { ("+" | "-" | "*" | "/" 
-                         | ">" | "<" | "==" | "!=" | ">=" | "<=") term } ;
+(* Expressões aritméticas e lógicas com precedência básica *)
+<expression>      ::= <relational> ;
+<relational>      ::= <additive> { ( "==" | "!=" | "<" | ">" | "<=" | ">=" ) <additive> } ;
+<additive>        ::= <multiplicative> { ( "+" | "-" ) <multiplicative> } ;
+<multiplicative>  ::= <primary> { ( "*" | "/" ) <primary> } ;
+<primary>         ::= <number>
+                    | <identifier>
+                    | "(" <expression> ")"
+                    ;
 
-term             = identifier
-                 | number
-                 | "(" expression ")" ;
+(* Identificadores e números *)
+<identifier>      ::= <letter> { <letter> | <digit> | "_" } ;
+<number>          ::= <digit> { <digit> } ;
 
-identifier       = letter { letter | "_" | digit } ;
-number           = digit { digit } ;
-digit            = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
-letter           = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i"
-                 | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r"
-                 | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
-                 | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I"
-                 | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R"
-                 | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" ;
+<digit>           ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+<letter>          ::= "a" … "z" | "A" … "Z" ;
+
 ## Análise Léxica
 
 Definição dos tokens, suas expressões regulares e descrições:

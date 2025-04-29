@@ -1,0 +1,26 @@
+remember contador as 0;
+remember limite as 10;
+
+if (contador < limite) {
+    show(contador);
+}
+
+while (contador < limite) repeat {
+    remember contador as contador + 1;
+    show(contador);
+}
+
+run(5) {
+    remember valor as 42;
+    show(valor);
+}
+
+$ {
+    show(42 + 17);
+    show(100 / 5);
+} $
+
+forget contador;
+forget limite;
+
+end;
