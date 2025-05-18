@@ -1,0 +1,23 @@
+remember a as 5;
+remember x as 2;
+
+show(a);            // deve imprimir “5”
+show(x);            // deve imprimir “2”
+
+
+$ {
+    remember z as 0;
+    while (z > -1) repeat {
+        z as -1;
+        // Dentro do bloco de debug…
+        remember b as a + x;
+        show(b);
+        a as b * 3;
+        show(a);
+    }
+} $               // imprime “21”
+
+
+show(a + x);        // fora do debug, imprime “21 + 2 = 23”
+
+end;

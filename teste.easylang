@@ -6,7 +6,7 @@ if (contador < limite) {
 }
 
 while (contador < limite) repeat {
-    remember contador as contador + 1;
+    contador as contador + 1;
     show(contador);
 }
 

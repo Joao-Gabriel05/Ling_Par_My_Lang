@@ -1,8 +1,11 @@
+%option noyywrap
+%option debug
 %{
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "parser.tab.h"    /* Tokens gerados pelo Bison */
+#include "parser.h"  /* Tokens gerados pelo Bison */
 
 int line_num = 1;       /* Contador de linhas para erros */
 

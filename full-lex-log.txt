@@ -1,0 +1,892 @@
+Starting parse
+Entering state 0
+Reading a token: --(end of buffer or a NUL)
+--accepting rule at line 36 ("remember")
+Next token is token KW_REMEMBER ()
+Shifting token KW_REMEMBER ()
+Entering state 1
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 11
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 37 ("as")
+Next token is token KW_AS ()
+Shifting token KW_AS ()
+Entering state 22
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 70 ("0")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 1 11 22
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 1 11 22
+Entering state 35
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 53
+Reducing stack by rule 6 (line 91):
+   $1 = token KW_REMEMBER ()
+   $2 = token IDENTIFIER ()
+   $3 = token KW_AS ()
+   $4 = nterm expression ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0
+Entering state 10
+Reducing stack by rule 2 (line 64):
+   $1 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 36 ("remember")
+Next token is token KW_REMEMBER ()
+Shifting token KW_REMEMBER ()
+Entering state 1
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("limite")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 11
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 37 ("as")
+Next token is token KW_AS ()
+Shifting token KW_AS ()
+Entering state 22
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 70 ("10")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 1 11 22
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 1 11 22
+Entering state 35
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 53
+Reducing stack by rule 6 (line 91):
+   $1 = token KW_REMEMBER ()
+   $2 = token IDENTIFIER ()
+   $3 = token KW_AS ()
+   $4 = nterm expression ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 30 ("
+")
+--accepting rule at line 39 ("if")
+Next token is token KW_IF ()
+Shifting token KW_IF ()
+Entering state 3
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 13
+Reading a token: --accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 3 13
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 3 13
+Entering state 27
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 55 ("<")
+Next token is token OP_LT ()
+Shifting token OP_LT ()
+Entering state 45
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("limite")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 3 13 27 45
+Entering state 63
+Reducing stack by rule 23 (line 131):
+   $1 = nterm expression ()
+   $2 = token OP_LT ()
+   $3 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 3 13
+Entering state 27
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 47
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 64 ("{")
+Next token is token LBRACE ()
+Shifting token LBRACE ()
+Entering state 17
+Reducing stack by rule 4 (line 79):
+-> $$ = nterm block_stmts ()
+Stack now 0 9 3 13 27 47 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 44 ("show")
+Next token is token KW_SHOW ()
+Shifting token KW_SHOW ()
+Entering state 6
+Reading a token: --accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 16
+Reading a token: --accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 3 13 27 47 17 32 6 16
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 3 13 27 47 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 50
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 68
+Reducing stack by rule 12 (line 110):
+   $1 = token KW_SHOW ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 3 13 27 47 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 3 13 27 47 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 65 ("}")
+Next token is token RBRACE ()
+Shifting token RBRACE ()
+Entering state 51
+Reducing stack by rule 14 (line 117):
+   $1 = token LBRACE ()
+   $2 = nterm block_stmts ()
+   $3 = token RBRACE ()
+-> $$ = nterm block ()
+Stack now 0 9 3 13 27 47
+Entering state 65
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 30 ("
+")
+--accepting rule at line 41 ("while")
+Next token is token KW_WHILE ()
+Reducing stack by rule 9 (line 104):
+   $1 = token KW_IF ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = nterm block ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Next token is token KW_WHILE ()
+Shifting token KW_WHILE ()
+Entering state 4
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 14
+Reading a token: --accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 4 14
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 4 14
+Entering state 29
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 55 ("<")
+Next token is token OP_LT ()
+Shifting token OP_LT ()
+Entering state 45
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("limite")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 4 14 29 45
+Entering state 63
+Reducing stack by rule 23 (line 131):
+   $1 = nterm expression ()
+   $2 = token OP_LT ()
+   $3 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 4 14
+Entering state 29
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 48
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 42 ("repeat")
+Next token is token KW_REPEAT ()
+Shifting token KW_REPEAT ()
+Entering state 66
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 64 ("{")
+Next token is token LBRACE ()
+Shifting token LBRACE ()
+Entering state 17
+Reducing stack by rule 4 (line 79):
+-> $$ = nterm block_stmts ()
+Stack now 0 9 4 14 29 48 66 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 36 ("remember")
+Next token is token KW_REMEMBER ()
+Shifting token KW_REMEMBER ()
+Entering state 1
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 11
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 37 ("as")
+Next token is token KW_AS ()
+Shifting token KW_AS ()
+Entering state 22
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 4 14 29 48 66 17 32 1 11 22
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 4 14 29 48 66 17 32 1 11 22
+Entering state 35
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 56 ("+")
+Next token is token OP_PLUS ()
+Shifting token OP_PLUS ()
+Entering state 38
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 70 ("1")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 4 14 29 48 66 17 32 1 11 22 35 38
+Entering state 56
+Reducing stack by rule 16 (line 124):
+   $1 = nterm expression ()
+   $2 = token OP_PLUS ()
+   $3 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 4 14 29 48 66 17 32 1 11 22
+Entering state 35
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 53
+Reducing stack by rule 6 (line 91):
+   $1 = token KW_REMEMBER ()
+   $2 = token IDENTIFIER ()
+   $3 = token KW_AS ()
+   $4 = nterm expression ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 4 14 29 48 66 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 4 14 29 48 66 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 44 ("show")
+Next token is token KW_SHOW ()
+Shifting token KW_SHOW ()
+Entering state 6
+Reading a token: --accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 16
+Reading a token: --accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 4 14 29 48 66 17 32 6 16
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 4 14 29 48 66 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 50
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 68
+Reducing stack by rule 12 (line 110):
+   $1 = token KW_SHOW ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 4 14 29 48 66 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 4 14 29 48 66 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 65 ("}")
+Next token is token RBRACE ()
+Shifting token RBRACE ()
+Entering state 51
+Reducing stack by rule 14 (line 117):
+   $1 = token LBRACE ()
+   $2 = nterm block_stmts ()
+   $3 = token RBRACE ()
+-> $$ = nterm block ()
+Stack now 0 9 4 14 29 48 66
+Entering state 70
+Reducing stack by rule 10 (line 106):
+   $1 = token KW_WHILE ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = token KW_REPEAT ()
+   $6 = nterm block ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 30 ("
+")
+--accepting rule at line 43 ("run")
+Next token is token KW_RUN ()
+Shifting token KW_RUN ()
+Entering state 5
+Reading a token: --accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 15
+Reading a token: --accepting rule at line 70 ("5")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 5 15
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 5 15
+Entering state 30
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 49
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 64 ("{")
+Next token is token LBRACE ()
+Shifting token LBRACE ()
+Entering state 17
+Reducing stack by rule 4 (line 79):
+-> $$ = nterm block_stmts ()
+Stack now 0 9 5 15 30 49 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 36 ("remember")
+Next token is token KW_REMEMBER ()
+Shifting token KW_REMEMBER ()
+Entering state 1
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("valor")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 11
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 37 ("as")
+Next token is token KW_AS ()
+Shifting token KW_AS ()
+Entering state 22
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 70 ("42")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 5 15 30 49 17 32 1 11 22
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 5 15 30 49 17 32 1 11 22
+Entering state 35
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 53
+Reducing stack by rule 6 (line 91):
+   $1 = token KW_REMEMBER ()
+   $2 = token IDENTIFIER ()
+   $3 = token KW_AS ()
+   $4 = nterm expression ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 5 15 30 49 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 5 15 30 49 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 44 ("show")
+Next token is token KW_SHOW ()
+Shifting token KW_SHOW ()
+Entering state 6
+Reading a token: --accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 16
+Reading a token: --accepting rule at line 71 ("valor")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 25
+Reducing stack by rule 26 (line 137):
+   $1 = token IDENTIFIER ()
+-> $$ = nterm term ()
+Stack now 0 9 5 15 30 49 17 32 6 16
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 5 15 30 49 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 50
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 68
+Reducing stack by rule 12 (line 110):
+   $1 = token KW_SHOW ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 5 15 30 49 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 5 15 30 49 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 65 ("}")
+Next token is token RBRACE ()
+Shifting token RBRACE ()
+Entering state 51
+Reducing stack by rule 14 (line 117):
+   $1 = token LBRACE ()
+   $2 = nterm block_stmts ()
+   $3 = token RBRACE ()
+-> $$ = nterm block ()
+Stack now 0 9 5 15 30 49
+Entering state 67
+Reducing stack by rule 11 (line 108):
+   $1 = token KW_RUN ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = nterm block ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 30 ("
+")
+--accepting rule at line 67 ("$")
+Next token is token DOLLAR ()
+Shifting token DOLLAR ()
+Entering state 7
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 64 ("{")
+Next token is token LBRACE ()
+Shifting token LBRACE ()
+Entering state 17
+Reducing stack by rule 4 (line 79):
+-> $$ = nterm block_stmts ()
+Stack now 0 9 7 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 44 ("show")
+Next token is token KW_SHOW ()
+Shifting token KW_SHOW ()
+Entering state 6
+Reading a token: --accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 16
+Reading a token: --accepting rule at line 70 ("42")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 7 17 32 6 16
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 7 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 56 ("+")
+Next token is token OP_PLUS ()
+Shifting token OP_PLUS ()
+Entering state 38
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 70 ("17")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 7 17 32 6 16 31 38
+Entering state 56
+Reducing stack by rule 16 (line 124):
+   $1 = nterm expression ()
+   $2 = token OP_PLUS ()
+   $3 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 7 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 50
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 68
+Reducing stack by rule 12 (line 110):
+   $1 = token KW_SHOW ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 7 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 7 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 27 ("    ")
+--accepting rule at line 44 ("show")
+Next token is token KW_SHOW ()
+Shifting token KW_SHOW ()
+Entering state 6
+Reading a token: --accepting rule at line 62 ("(")
+Next token is token LPAREN ()
+Shifting token LPAREN ()
+Entering state 16
+Reading a token: --accepting rule at line 70 ("100")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 7 17 32 6 16
+Entering state 28
+Reducing stack by rule 15 (line 122):
+   $1 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 7 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 59 ("/")
+Next token is token OP_DIV ()
+Shifting token OP_DIV ()
+Entering state 39
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 70 ("5")
+Next token is token NUMBER ()
+Shifting token NUMBER ()
+Entering state 24
+Reducing stack by rule 27 (line 138):
+   $1 = token NUMBER ()
+-> $$ = nterm term ()
+Stack now 0 9 7 17 32 6 16 31 39
+Entering state 57
+Reducing stack by rule 19 (line 127):
+   $1 = nterm expression ()
+   $2 = token OP_DIV ()
+   $3 = nterm term ()
+-> $$ = nterm expression ()
+Stack now 0 9 7 17 32 6 16
+Entering state 31
+Reading a token: --accepting rule at line 63 (")")
+Next token is token RPAREN ()
+Shifting token RPAREN ()
+Entering state 50
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 68
+Reducing stack by rule 12 (line 110):
+   $1 = token KW_SHOW ()
+   $2 = token LPAREN ()
+   $3 = nterm expression ()
+   $4 = token RPAREN ()
+   $5 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9 7 17 32
+Entering state 52
+Reducing stack by rule 5 (line 80):
+   $1 = nterm block_stmts ()
+   $2 = nterm statement ()
+-> $$ = nterm block_stmts ()
+Stack now 0 9 7 17
+Entering state 32
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 65 ("}")
+Next token is token RBRACE ()
+Shifting token RBRACE ()
+Entering state 51
+Reducing stack by rule 14 (line 117):
+   $1 = token LBRACE ()
+   $2 = nterm block_stmts ()
+   $3 = token RBRACE ()
+-> $$ = nterm block ()
+Stack now 0 9 7
+Entering state 18
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 67 ("$")
+Next token is token DOLLAR ()
+Shifting token DOLLAR ()
+Entering state 33
+Reducing stack by rule 13 (line 112):
+   $1 = token DOLLAR ()
+   $2 = nterm block ()
+   $3 = token DOLLAR ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 30 ("
+")
+--accepting rule at line 38 ("forget")
+Next token is token KW_FORGET ()
+Shifting token KW_FORGET ()
+Entering state 2
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("contador")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 12
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 23
+Reducing stack by rule 7 (line 97):
+   $1 = token KW_FORGET ()
+   $2 = token IDENTIFIER ()
+   $3 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 38 ("forget")
+Next token is token KW_FORGET ()
+Shifting token KW_FORGET ()
+Entering state 2
+Reading a token: --accepting rule at line 27 (" ")
+--accepting rule at line 71 ("limite")
+Next token is token IDENTIFIER ()
+Shifting token IDENTIFIER ()
+Entering state 12
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 23
+Reducing stack by rule 7 (line 97):
+   $1 = token KW_FORGET ()
+   $2 = token IDENTIFIER ()
+   $3 = token SEMICOLON ()
+-> $$ = nterm statement ()
+Stack now 0 9
+Entering state 21
+Reducing stack by rule 3 (line 66):
+   $1 = nterm stmt_list ()
+   $2 = nterm statement ()
+-> $$ = nterm stmt_list ()
+Stack now 0
+Entering state 9
+Reading a token: --accepting rule at line 30 ("
+")
+--accepting rule at line 30 ("
+")
+--accepting rule at line 45 ("end")
+Next token is token KW_END ()
+Shifting token KW_END ()
+Entering state 20
+Reading a token: --accepting rule at line 66 (";")
+Next token is token SEMICOLON ()
+Shifting token SEMICOLON ()
+Entering state 34
+Reducing stack by rule 1 (line 58):
+   $1 = nterm stmt_list ()
+   $2 = token KW_END ()
+   $3 = token SEMICOLON ()
+-> $$ = nterm program ()
+Stack now 0
+Entering state 8
+Reading a token: --(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Stack now 0 8
+Cleanup: popping nterm program ()
