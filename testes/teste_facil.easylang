@@ -1,0 +1,13 @@
+remember sum as 0;
+remember i   as  5;
+
+// Loop de 1 até 5
+while (i <= 5) repeat {
+    sum as sum + i;
+    i   as i   + 1;
+}
+
+// Exibe o total: 1+2+3+4+5 = 15
+show(sum);
+
+end;
